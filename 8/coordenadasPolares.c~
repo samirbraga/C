@@ -18,5 +18,5 @@ int main(){
 	x = r*cos(a);
 	y = r*sin(a);
 	printf("Coordenadas cartesanas correspondentes: (%f, %f)\n", x, y);
-	return 0;
+	return 1;
 }
