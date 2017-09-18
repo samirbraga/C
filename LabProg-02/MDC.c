@@ -13,7 +13,7 @@ int main(void){
 	printf("Digite o primeiro número:\n");
 	scanf("%d", &x);
 	printf("Digite o segundo número:\n");
-	scanf("%d", &x);
+	scanf("%d", &y);
 
 	// Usando a função
 	resultado = MDC(x,y);
