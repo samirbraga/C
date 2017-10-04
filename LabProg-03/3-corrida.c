@@ -1,6 +1,7 @@
 # include <stdio.h>
+
 float melhorTempo(float* vetor, int n);
-float voltamelhorTempo(float* vetor);
+float voltaMelhorTempo(float* vetor);
 float piorTempo(float* vetor);
 float voltaPiorTempo(float* vetor);
 
@@ -10,10 +11,9 @@ int main(void){
 	printf("Digite a quantidade de voltas:\n");
 	scanf("%d", &n);
 
-	float vet_temp[n+1];
-	vet_temp[0] = 0.0f;
+	float vet_temp[n];
 	int i;
-	for(i = 1; i <= n; i++){
+	for(i = 0; i < n; i++){
 		printf("Digite o tempo registrado na volta %d:\n", i);
 		scanf("%f", &vet_temp[i]);
 	}
@@ -22,11 +22,11 @@ int main(void){
 }
 
 float melhorTempo(float* vetor, int n){
-	float T = vetor[n] - vetor[n-1];
+	float T = vetor[0];
 	int i;
-	for(i = n-1; i >= 0; i--){
-		if (T < vetor[i] - vetor[i-1]);
-			T = vetor[i] - vetor[i-1];
+	for(i = 1; i < n; i++){
+		if (T < vetor[i]);
+			T = vetor[i];
 		}
 	return T;
 	}
